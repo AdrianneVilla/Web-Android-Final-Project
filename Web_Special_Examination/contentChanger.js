@@ -1,11 +1,15 @@
+ document.getElementById('open').onclick = function() {
+            document.getElementById('modal-container').style.opacity = '1';
+        };
 
-  const navLinks = document.querySelectorAll('.nav-links');
-  const mainContent = document.getElementById('main');
+        document.getElementById('close').onclick = function() {
+            document.getElementById('modal-container').style.opacity = '0';
+        };
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(event){
-        event.preventDefault();
-        const newContent = this.getAttribute('data-content');
-        mainContent.innerHTML = `${this.textContent}`
-    });
-  })
+        // Optional: Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal-container');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };

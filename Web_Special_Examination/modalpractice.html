@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modal.css">
+    <title>Document</title>
+    
+    <script>
+    
+        document.getElementById('open').onclick = function() {
+            document.getElementById('modal-container').style.opacity = '1';
+        };
+
+        document.getElementById('close').onclick = function() {
+            document.getElementById('modal-container').style.opacity = '0';
+        };
+
+        // Optional: Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal-container');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</head>
+<body>
+    <button id='open'> click me</button>
+    <div id='modal-container' class="modal-container" style="display: none;">
+        <div class="modal">
+            <div class="details-holder">
+                <h1>Name</h1>
+                <h2>Subject</h2>
+            </div>
+            <button id='close'>Close me</button>
+        </div>
+    </div>
+
+</body>
+</html>
