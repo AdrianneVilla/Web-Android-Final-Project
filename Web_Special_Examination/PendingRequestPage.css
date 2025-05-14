@@ -97,7 +97,7 @@ nav a{
   align-items: center;
   gap: 0.625rem;
   padding: 0.625rem 0.875rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1;
   text-decoration:none;
 }
@@ -158,122 +158,6 @@ main div{
  flex-grow: 1;
  overflow-y: auto;
  
-}
-
-.term{
-  align-items: center;
-  text-align: center;
-  padding-top: 20px;
-  font-size: 40px;
-  color: #0159a6;
-}
-#term-activated{
-  margin: 0;
-  padding: 0;
-}
-.summary{
-  width: 100%;
-  text-align: center;
-  align-items: center;
-  height: auto;
-  margin-top: 20px;
-  border-radius: 40px;
-  background-color: white;
-    opacity: 80%;
-}
-
-.card-items{
-  display: flex;
-  align-items: center;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  box-shadow: none;
-  align-content: center;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  padding-left: 6.5%;
-}
-
-.card-items div{
-  align-items: center;
-  width: 30%;
-  margin: 10px;
-  height: 220px;
-  text-align: center;
-}
-.term-title{
-  box-shadow: none;
-}
-.total-students{
-  background-color:#0159a6 ;
-  border-radius: 20px;
-  opacity: 100%;
-  color: white;
-  padding-top: 20px;
-  text-align: left;
-}
-
-.total-students p{
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-}
-.total-exams{
-    background-color:#f7c64d ;
-  border-radius: 20px;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  padding-top: 20px;
-  text-align: left;
-}
-
-.most-program{
-    background-color: #eb6e38;
-  border-radius: 20px;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  padding-top: 20px;
-  text-align: left;
-}
-
-.total-number-holder{
-  font-size: 50px;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  align-self: center;
-  margin-top: 25px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.total-exams-holder{
-  font-size: 50px;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  align-self: center;
-  margin-top: 25px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.graph-holder{
-  display: flex;
-  margin-top: 30px;
-  box-shadow: none;
-}
-
-.graph-holder div{
-  height: 100%;
-  width: 50%;
-  border-radius: 15px;
-  background-color: white;
-  opacity: 80%;
-}
-
-.bar-graph{
-  margin-left: 1.5%;
 }
 
 html, body {
@@ -350,7 +234,7 @@ tr th{
 
 .table-holder{
   margin-top: 30px;
-  height: 700px; /* Set your desired height */
+  height: 550px; /* Set your desired height */
   overflow-y: auto;  /* Enable vertical scrolling */
   overflow-x: hidden; /* Disable horizontal scrolling */
   border-radius: 20px; /* Optional: for styling */

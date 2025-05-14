@@ -4,38 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
-    
-    <script>
-    
-        document.getElementById('open').onclick = function() {
-            document.getElementById('modal-container').style.opacity = '1';
-        };
-
-        document.getElementById('close').onclick = function() {
-            document.getElementById('modal-container').style.opacity = '0';
-        };
-
-        // Optional: Close modal when clicking outside of it
-        window.onclick = function(event) {
-            const modal = document.getElementById('modal-container');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        };
-    </script>
 </head>
 <body>
-    <button id='open'> click me</button>
-    <div id='modal-container' class="modal-container" style="display: none;">
-        <div class="modal">
-            <div class="details-holder">
-                <h1>Name</h1>
-                <h2>Subject</h2>
+     <div class="modal-container">
+            <div class="modal">
+                <div class='request-details'>
+                      <h1>Request Details</h1>
+                </div>
+                <div class="holder">
+                    <div class="student-details">
+                        <img src="./assets/student-icon.png" alt="">
+                        <span class="student-name">name  </span>
+                    </div>
+                </div>
+                </div>
             </div>
-            <button id='close'>Close me</button>
-        </div>
-    </div>
-
+          </div>
 </body>
 </html>
