@@ -26,37 +26,16 @@
           </div>
 
           <div class="login-container">
-          <form>
-           <input id="Email" type="text" placeholder='Email' required/>
+          <form action="http://localhost/SpecialExamBackend/program_head/login.php" method="POST">
+            <input id="Email" type="text" name="email" placeholder='Email' required/>
+            <input id="Password" name="password" type="password" placeholder='Password' required/>
+            <div class='forgot-password'><a href="#">Forgot password?</a></div>
+            <button type="submit" id='login-button'>Login</button>
           </form>
-          <form>
-          <input id="Password" type="password" placeholder='Password' required/>
-          </form>
-          <div class='forgot-password'><a href="#">Forgot password?</a></div>
-          <button id='login-button'>Login</button>
           </div>
         </div>
       </div>
       </div>
       </div>
-
-<script>
-// Select the login button
-const emailInput = document.getElementById('Email');
-const passwordInput = document.getElementById('Password');
-const loginButton = document.getElementById('login-button');
-
-// Add a click event listener
-loginButton.addEventListener('click', function() {
-  const email = emailInput.value;
-  const password = passwordInput.value;
-
-  if (email === "Adrianne" && password == "adrianne"){
-    window.location.href = 'homepage.html';
-  }else{
-    alert ("Invalid email or password. Please try again.")
-  }
-});
-</script>
 </body>
 </html>
