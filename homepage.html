@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="homepage.css">
+  <script src="contentChanger.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <title>STI College Balagtas Special Examination</title>
+  <style>
+    .container-summary {
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      height: 100px; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="item">
+      <img class="sti-logo" src="./assets/stilogo.png" alt="sti logo">
+      <p class="title">STI College Balagtas</p>
+    </header>
+    <aside class="sidebar">
+      <nav>
+      <ul>
+        <li class="nav-link home">
+          <a id="dashboard" href="homepage.html">
+            <i class="homepage"><img src="/assets/home.png" alt=""></i>
+            <span>Homepage</span>
+          </a>
+        </li>
+        <li class="nav-link pending"> 
+          <a id="pending" href="PendingRequestPage.html">
+            <i class="pending"><img src="./assets/pending-icon.png" alt="icon"></i>
+            <span>Pending Request</span>
+            
+          </a>
+        </li>
+        <li class="nav-link">
+          <a id="history" href="history">
+            <i class="history"><img src="/assets/history-icon.png" alt=""></i>
+            <span>History</span>
+          </a>
+        </li>
+        <li class="nav-link">
+          <a id="scheduling" href="scheduling">
+            <i class="scheduling"><img src="/assets/scheduling-icon.png" alt=""></i>
+            <span>Scheduling</span>
+          </a>
+        </li>
+        <li class="nav-link ">
+          <a  id="announcement" href="announcement">
+            <i class="announcement"><img src="/assets/announcement-icon.png" alt=""></i>
+            <span>Announcement</span>
+          </a>
+        </li>
+      </ul>
+        </nav>
+    </aside>
+    <main class="main">
+      <h1> Dashboard</h1>
+      <div class="summary">
+        <div class="term-title">
+          <h2 class="term">Prelim</h2>
+          <p class="term-holder">Term of <span id="term-activated">S.Y 2025-2026</span></p>
+        </div>
+        <div class="card-items">
+          <div class="total-students">
+            <p>Total Students</p>
+            <p class="total-number-holder">25</p>
+          </div>
+          <div class="total-exams">
+            <p>Total Exams</p>
+            <p class="total-exams-holder">25</p>
+          </div>
+          <div class="most-program">
+            <p>Most program</p>
+            <p class="total-exams-holder">BSIT</p>
+          </div>
+        </div>
+      </div>
+      <div class="graph-holder">
+      <div class="pie-graph">
+
+      </div>
+      <div class="bar-graph">
+      </div>
+     </div>
+    </main>
+    <footer class="item">Footer</footer>
+  </div>
+</body>
+</html>
