@@ -79,7 +79,7 @@
             <script>
                 for(let i = 0; i < 100; i++){
                     document.write('<tr id="tbrow' + i + '">\n');
-                    document.write('    <th scope="row">Adrianne Villa ' + (i + 1) + '</th>\n');
+                    document.write('    <th id = "name" scope="row">Adrianne Villa ' + (i + 1) + '</th>\n');
                     document.write('    <th scope="row">BSIT</th>\n');
                     document.write('    <th scope="row">Programming Language</th>\n');
                     document.write('    <th scope="row">Midterm</th>\n');
@@ -91,6 +91,67 @@
             </script>
         </table>
       </div>
+      <div class="modal-container">
+            <div class="modal">
+                <div class='request-details'>
+                      <h1>Request Details</h1>
+                </div>
+                <div class="holder">
+                    <div class="student-details">
+                        <div class="img-container"><img class="student-icon" src="./assets/student-icon.png" alt=""></div>
+                       <div class="details-wrapper"> 
+                        <div class="name-container"><span id="studentname" class="student-name">Adrianne Villa</span></div>
+                        <div class="bottom-holder">
+                          <p class="student-number" id="studNum">02000286986 </p>
+                          <p class="divider">&#8739;</p>
+                          <p class="program">BSIT3A</p>
+                          </div>
+                        </div>
+                        <div class="status-holder"><div class="status" id="status"><p class="status-title">pending</p></div></div> 
+                    </div>
+                       <div class="second-holder">
+                        <div class="reason-container">
+                          <span class="reason">Reason:  </span> 
+                          <span class="student-reason" id="studReason">Medical</span>
+                        </div>
+                         <div class="img-container">
+                          <span class="reason">Image: <span class="link-holder">
+                            <a class="img-link" href="#">link</a>
+                          </span>
+                        </span>
+                        </div>
+                         <div class="button-group"><button class="waive" id="waive">Waive</button> <button class="payment" id="payment">Payment</button></div>
+                       </div>
+                       <div class="third-holder">
+                  
+                      </div>
+
+                      <button>Approve</button>
+
+                </div>
+                
+                
+                </div>
+            </div>
+
+            <script>
+              const waiveButton = document.getElementById('waive');
+              const paymentButton = document.getElementById('payment');
+
+              waiveButton.addEventListener('click', () => {
+                waiveButton.style.backgroundColor = '#0159a6';
+                waiveButton.style.borderColor = '#0159a6';
+                waiveButton.style.transition = 'background-color 0.3s ease';
+                paymentButton.style.backgroundColor = '#797979';
+              });
+
+              paymentButton.addEventListener('click', () => {
+                paymentButton.style.backgroundColor = '#0159a6';
+                paymentButton.style.borderColor = '#0159a6';
+                paymentButton.style.transition = 'background-color 0.3s ease';
+                waiveButton.style.backgroundColor = '#797979';
+              });
+            </script>
     </main>
   </div>
 </body>

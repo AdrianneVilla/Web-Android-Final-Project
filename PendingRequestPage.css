@@ -199,7 +199,7 @@ thead {
   position: sticky; /* Make the header sticky */
   top: 0;          /* Stick to the top of the container */
   background-color: white; /* Optional: to ensure the header has a background */
-  z-index: 10;    /* Optional: to ensure it stays above other content */
+  z-index: 5;
   padding-top: 10px;
 }
 thead tr{
@@ -239,5 +239,240 @@ tr th{
   overflow-x: hidden; /* Disable horizontal scrolling */
   border-radius: 20px; /* Optional: for styling */
   background-color: white;
+}
+
+.modal-container{
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color:rgba(0, 0, 0, 0.50);
+}
+.modal{
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 90%;
+    background-color: white;
+    border-radius: 40px;
+
+}
+
+.request-details{
+    position: relative;;
+    display: flex;
+    top: 0px;
+    height: 15%;
+    width: 100%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color:#0159a6 ;
+    align-items: center;
+    justify-content: center;
+}
+
+.request-details h1{
+    font-family: 'Poppins';
+    font-weight: 600px;
+    font-size: 25px;
+    color: #FAF502;
+    
+}
+
+.student-details{
+    background-color:white;
+    position: relative;
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    height: 18%;
+    box-shadow: 0px 0px 5.5px 1px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
+
+.holder{
+    background-color: white;
+    position: relative;
+    display: flex;
+    height: 85%;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    flex-direction: column;
+
+}
+
+.student-details img{
+    height: 80px;
+    width: 80px;
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.student-name{
+    position:relative;
+    margin: 0;
+    font-size: 30px;
+}
+
+.status{
+  position: relative;
+  background-color:#F9F8C2;
+  border: 2px solid #E1BC47;
+  border-radius: 4px;
+  height: 30px;
+  width: 120px;
+}
+
+.status p{
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 14px;
+  color: #E1BC47;
+}
+
+.bottom-holder{
+  width: 40%;
+  height: 50px;
+  box-shadow: none;
+  display: flex;
+  position: relative;
+  margin-left: 20px;
+}
+.bottom-holder p{
+  color: #5B5B5B;
+}
+
+.second-holder{
+    background-color:white;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 25%;
+    box-shadow: 0px 0px 5.5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.third-holder{
+    background-color:white;
+    position: relative;
+    border-radius: 10px;
+    width: 90%;
+    height: 30%;
+    box-shadow: 0px 0px 5.5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.second-holder{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  p{
+    padding-left: 10px;
+  }
+}
+
+.img-container{
+  width: auto;
+  background-color: white;
+  box-shadow: none;
+  display: flex;
+  margin-left: 10px;
+}
+
+.name-container{
+  width: 50%;
+  height: 40%;
+  display: flex;
+  box-shadow: none;
+  margin: 0px;
+  padding: 0;
+}
+
+.divider{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.details-wrapper{
+  box-shadow: none;
+}
+
+.status-holder{
+  width: auto;
+  height:20px;
+  margin-right: 20px;
+  box-shadow: none;
+  display: flex;
+}
+
+.reason-container{
+  display: flex;
+  box-shadow: none;
+  width: 100%;
+  height: auto;
+}
+
+.student-reason{
+  font-weight: 500;
+}
+
+.second-holder a{
+  font-weight: 500;
+}
+
+.link-holder{
+  margin-left: 25px;
+}
+
+.button-group{
+  display: inline-flex;
+  position: relative;
+  flex-direction: row-reverse;
+  width: 100%;
+  height:50px;
+  background: transparent;
+  margin-bottom: 10px;
+  box-shadow: none;
+  padding-right: 10px;
+}
+.waive{
+  background-color: #797979;
+  height: 50px;
+  width: 100px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color:#ffffff;
+  border-color: #000000;
+  transition: background-color 0.3s ease;
+}
+
+.waive:active {
+  background-color: #0159a6;
+  border-color: #0159a6;
+}
+
+.payment{
+  background-color: #0159a6;
+  height: 50px;
+  width: 100px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color:white;
+  border-color: #0159a6;
+  transition: background-color 0.3s ease;
+}
+
+.payment:active {
+  background-color: #797979;
+  border-color: #000000;
 }
 
