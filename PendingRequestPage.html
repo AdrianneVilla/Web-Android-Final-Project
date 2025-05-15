@@ -27,13 +27,13 @@
       <nav>
       <ul>
         <li class="home">
-          <a href="dashboard">
-            <i class="homepage"><img src="./assets/home.png" alt=""></i>
+          <a id="home">
+            <i class="homepage"><img id="home-icon" src="./assets/home.png" alt=""></i>
             <span>Homepage</span>
           </a>
         </li>
-        <li>
-          <a href="pending">
+        <li class="pending">
+          <a class="pending" id="pending" href="PendingRequestPage.html">
             <i class="pending"><img src="./assets/pending-icon.png" alt="icon"></i>
             <span>Pending Request</span>
           </a>
@@ -66,11 +66,9 @@
             <thead>
                 <tr>
                     <th scope="col">Name</th>
-                    <th scope="col">Program</th>
-                    <th scope="col">Course</th>
+                    <th scope="col">Program</th>  
                     <th scope="col">Term</th>
                     <th scope="col">Reason</th>
-                    <th scope="col">Image</th>
                     <th scope="col">Action</th>
                 </tr>
 
@@ -81,78 +79,109 @@
                     document.write('<tr id="tbrow' + i + '">\n');
                     document.write('    <th id = "name" scope="row">Adrianne Villa ' + (i + 1) + '</th>\n');
                     document.write('    <th scope="row">BSIT</th>\n');
-                    document.write('    <th scope="row">Programming Language</th>\n');
                     document.write('    <th scope="row">Midterm</th>\n');
                     document.write('    <th scope="row">Medical</th>\n');
-                    document.write('    <th scope="row"><a href="#">IMG' + (112 + i) + '</a></th>\n');
-                    document.write('    <th scope="row"><button id = "details" class="details"><img src="./assets/details-icon.png" alt=""></button></th>\n');
+                    document.write('    <th scope="row"><button class="details"><img src="./assets/details-icon.png" alt=""></button></th>\n');
                     document.write('</tr>\n');
                 }
             </script>
         </table>
       </div>
-      <div class="modal-container">
-            <div class="modal">
-                <div class='request-details'>
-                      <h1>Request Details</h1>
-                </div>
-                <div class="holder">
-                    <div class="student-details">
-                        <div class="img-container"><img class="student-icon" src="./assets/student-icon.png" alt=""></div>
-                       <div class="details-wrapper"> 
-                        <div class="name-container"><span id="studentname" class="student-name">Adrianne Villa</span></div>
-                        <div class="bottom-holder">
-                          <p class="student-number" id="studNum">02000286986 </p>
-                          <p class="divider">&#8739;</p>
-                          <p class="program">BSIT3A</p>
-                          </div>
-                        </div>
-                        <div class="status-holder"><div class="status" id="status"><p class="status-title">pending</p></div></div> 
-                    </div>
-                       <div class="second-holder">
-                        <div class="reason-container">
-                          <span class="reason">Reason:  </span> 
-                          <span class="student-reason" id="studReason">Medical</span>
-                        </div>
-                         <div class="img-container">
-                          <span class="reason">Image: <span class="link-holder">
-                            <a class="img-link" href="#">link</a>
-                          </span>
-                        </span>
-                        </div>
-                         <div class="button-group"><button class="waive" id="waive">Waive</button> <button class="payment" id="payment">Payment</button></div>
-                       </div>
-                       <div class="third-holder">
-                  
-                      </div>
-
-                      <button>Approve</button>
-
-                </div>
-                
-                
-                </div>
+      <div id="modalContainer" class="modal-container">
+        <div class="modal">
+          <div class="request-details">
+            <h1>Request Details</h1>
+            <button id="close" class="close-button">×</button>
+          </div>
+          
+          <div class="holder">
+            <div class="student-card">
+              <img class="student-icon" src="./assets/student-icon.png" alt="Student Icon">
+              <div class="student-info">
+                <h2 id="studentname" class="student-name">Juan Dela Cruz</h2>
+                <p>
+                  <span id="studNum" class="student-number">02000123456</span> | 
+                  <span class="student-program">3rd Year BSIT</span>
+                </p>
+              </div>
+              <div class="status-indicator" id="status">Pending</div>
             </div>
-
-            <script>
-              const waiveButton = document.getElementById('waive');
-              const paymentButton = document.getElementById('payment');
-
-              waiveButton.addEventListener('click', () => {
-                waiveButton.style.backgroundColor = '#0159a6';
-                waiveButton.style.borderColor = '#0159a6';
-                waiveButton.style.transition = 'background-color 0.3s ease';
-                paymentButton.style.backgroundColor = '#797979';
-              });
-
-              paymentButton.addEventListener('click', () => {
-                paymentButton.style.backgroundColor = '#0159a6';
-                paymentButton.style.borderColor = '#0159a6';
-                paymentButton.style.transition = 'background-color 0.3s ease';
-                waiveButton.style.backgroundColor = '#797979';
-              });
-            </script>
+            
+            <div class="info-card">
+              <div class="info-row">
+                <span class="info-label">Reason:</span>
+                <span id="studReason" class="info-value">Medical Problem</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Upload:</span>
+                <a href="#" class="info-value info-link" id="imageLink" style="text-decoration: none; margin-left: 0;">IMG_1001.jpg</a>
+              </div>
+              <div class="button-group">
+                <button id="waive" class="btn btn-waive">Waive</button>
+                <button id="payment" class="btn btn-payment">Payment</button>
+              </div>
+            </div>
+            
+            <div class="info-card">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                <h3 style="color: #0159a6; font-weight: 700;">Course/s:</h3>
+                <h3 style="color: #0159a6; font-weight: 700;">Reference Number</h3>
+              </div>
+              <table class="course-table">
+                <tbody id="courseTableBody">
+                  <tr>
+                    <td id="course">Programming Language</td>
+                    <td id="reference">PL00102</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="action-buttons">
+              <button id="approvedBtn" class="btn-approve"> Approve</button>
+              <button id="declineBtn" class="btn-decline"> Decline</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      <div id="summaryModal" class="summary-modal-container">
+        <div class="summary-modal">
+          <div class="summary-details">
+            <h1>Summary</h1>
+            <button id="closeSummary" class="close-button">×</button>
+          </div>
+          <div class="holder">
+            <div class="student-card">
+              <img class="student-icon" src="./assets/student-icon.png" alt="Student Icon">
+              <div class="student-info">
+                <h2 id="summaryStudentName" class="student-name">Juan Dela Cruz</h2>
+                <p>
+                  <span id="summaryStudNum" class="student-number">02000123456</span> | 
+                  <span class="student-program">3rd Year BSIT</span>
+                </p>
+              </div>
+              <div id="statusBackColor" class="status-indicator"><p id="statusText">status</p></div>
+            </div>
+            <div class="summary-info-card">
+               <div class="info-row">
+                <span class="info-label">Reason:</span>
+                <span id="studReason" class="info-value">Medical Problem</span>
+                <span class="info-label">Action:</span>
+                <span id="actionGiven" class="inf-value">Action</span>
+              </div>
+            </div>
+            <div class="button-holder">
+              <button class="submit-button">Submit</button>
+              <button class="back-button">Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="Activities.js"></script>
+      
     </main>
   </div>
+  
 </body>
 </html>
