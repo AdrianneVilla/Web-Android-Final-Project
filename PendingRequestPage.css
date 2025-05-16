@@ -967,6 +967,7 @@ tr th{
     position: fixed;
     top: 0;
     left: 0;
+    display: none;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -1070,3 +1071,30 @@ tr th{
     }
 }
 
+.result-icon{
+  height: 20px;
+  width: 20px;
+}
+
+/* History-modal-container */
+
+.history-modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.history-modal{
+    background-color: white;
+    width: 90%;
+    height: 70%;
+}

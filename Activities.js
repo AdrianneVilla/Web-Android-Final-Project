@@ -11,7 +11,7 @@
         const summaryModal = document.getElementById('summaryModal');
         const closeSummaryBtn = document.getElementById('closeSummary');
         const declineButton = document.getElementById('declineBtn');
-        
+        const historyButton = document.getElementById('history');
 
         
         
@@ -105,6 +105,11 @@
           pendingButton.style.border = 'none';
         });
 
+        historyButton.addEventListener ('click', ()=>{
+          window.location.href = "History.html";
+        })
+        
+
         
         // will change the color of the status when clicking the approve button
         function updateSummaryModal(isApproved) {
@@ -128,11 +133,11 @@
         
           
           if (isApproved) {
-            
             statusText.textContent = 'Approved';
             statusText.style.color = '#03C820';
             backColor.style.backgroundColor = '#C4FFCD';
             backColor.style.border = '2px solid #03C820';
+            
           } else {
             statusText.textContent = 'Decline'; 
             statusText.style.color = '#FF0000';
